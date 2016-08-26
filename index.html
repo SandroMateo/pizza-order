@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/custom.css" type="text/css">
     <script src="js/jquery-3.1.0.js"></script>
@@ -27,13 +28,19 @@
                 Extra Large <span class="sizePrice">($8.00 plus toppings)</span>
               </label>
             </div>
+            <img id="extraLarge" src="img/pizza.jpg" class="img img-responsive" alt="2D picture of a pizza">
+            <p>|--------14 inches--------|</p><br>
+            <button id="sizeButton" type="button" class="btn btn-primary">Continue!</button>
+          </div>
+          <div class="col-xs-3">
             <div class="form-group">
               <label for="size">
                 <input type="radio" name="size" value="Large">
                 Large <span class="sizePrice">($7.00 plus toppings)</span>
               </label>
             </div>
-            <button id="sizeButton" type="button" class="btn btn-primary">Continue!</button>
+            <img id="large" src="img/pizza.jpg" class="img img-responsive" alt="2D picture of a pizza">
+            <p>|-------12 inches-------|</p>
           </div>
           <div class="col-xs-3">
             <div class="form-group">
@@ -42,12 +49,18 @@
                 Medium <span class="sizePrice">($6.00 plus toppings)</span>
               </label>
             </div>
+            <img id="medium" src="img/pizza.jpg" class="img img-responsive" alt="2D picture of a pizza">
+            <p>|------10 inches------|</p>
+          </div>
+          <div class="col-xs-3">
             <div class="form-group">
               <label for="size">
                 <input type="radio" name="size" value="Small">
                 Small <span class="sizePrice">($5.00 plus toppings)</span>
               </label>
             </div>
+            <img id="small" src="img/pizza.jpg" class="img img-responsive" alt="2D picture of a pizza">
+            <p>|-----8 inches-----|</p>
           </div>
         </div>
         <div class="row" id="chooseToppings">

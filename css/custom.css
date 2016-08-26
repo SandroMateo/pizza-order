@@ -11,6 +11,17 @@ h2 {
   display: none;
 }
 
+#large {
+  width: 90%;
+}
+
+#medium {
+  width: 80%;
+}
+
+#small {
+  width: 70%;
+}
 #chooseToppings {
   display: none;
 }
