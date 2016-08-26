@@ -6,3 +6,11 @@
   font-size: 80%;
   font-style: italic;
 }
+
+#chooseSize {
+  display: none;
+}
+
+#chooseToppings {
+  display: none;
+}

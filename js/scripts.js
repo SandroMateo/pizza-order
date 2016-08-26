@@ -1,7 +1,7 @@
-function pizzaOrder(name) = {
+function pizzaOrder(name, size, toppings) {
   this.name = name;
-  this.toppings = [];
-  this.sizing = "";
+  this.sizing = size;
+  this.toppings = toppings;
   this.price = 0;
 }
 
@@ -27,10 +27,19 @@ $(function() {
     $("#chooseSize").show();
   });
   $("#sizeButton").click(function() {
-    $("#chooseToppings").show();
+    $("#sizeButton").slideUp();
+    $("#chooseToppings").fadeIn(1500);
   });
   $("form").submit(function(event) {
     event.preventDefault();
     var inputName = $("#name-input").val();
+    var inputSize = $("input:radio[name=size]:checked").val();
+    var inputToppings = [];
+    $("input:checkbox[name=topping]:checked").each(function() {
+      inputToppings.push(this.value);
+    })
+    console.log(inputToppings);
+    var order = new pizzaOrder(inputname, inputSize, inputToppings);
+
   });
 });
