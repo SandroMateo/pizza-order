@@ -12,14 +12,156 @@
       <div class="jumbotron">
         <h1>Pizza Pies For The Eyes</h1>
       </div>
-      <div class="welcomeScreen">
+      <div id="welcomeScreen">
         <h2>Welcome!</h2>
-        <h4>Here at Pizza Pies For The Eyes we hand make every pie with love. We also offer an <bold>array</bold> of toppings for you to choose from, all at a great cost! make an order now and we'll deliver to you in no time!</h4>
-        <button id="orderButton" type="button" class="btn btn-success">Order!</button>
+        <p>Here at Pizza Pies For The Eyes we hand make every pie with love. We also offer an <strong>array</strong> of toppings for you to choose from, all at a great cost! Make an order now and we'll deliver to you in no time!</p>
+        <button id="orderButton" type="button" class="btn btn-success">Begin Order!</button>
       </div>
-      <div class="row">
+      <form>
+        <div class="row" id="chooseSize">
+          <h3>Choose a Size:</h3>
+          <div class="col-xs-3">
+            <div class="form-group">
+              <label for="size">
+                <input type="radio" name="size" value="Extra Large">
+                Extra Large <span class="sizePrice">($8.00 plus toppings)</span>
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="size">
+                <input type="radio" name="size" value="Large">
+                Large <span class="sizePrice">($7.00 plus toppings)</span>
+              </label>
+            </div>
+            <button id="sizeButton" type="button" class="btn btn-primary">Continue!</button>
+          </div>
+          <div class="col-xs-3">
+            <div class="form-group">
+              <label for="size">
+                <input type="radio" name="size" value="Medium">
+                Medium <span class="sizePrice">($6.00 plus toppings)</span>
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="size">
+                <input type="radio" name="size" value="Small">
+                Small <span class="sizePrice">($5.00 plus toppings)</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="row" id="chooseToppings">
+          <h3>Choose Some Toppings:</h3>
+          <p>(+ .50 each)</p>
+          <div class="col-xs-4">
+            <h4>Veggies:</h4>
+            <div class="form-group">
+              <label for="topping">
+                <input type="checkbox" name="topping" value="tomatoes">
+                tomatoes
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="topping">
+                <input type="checkbox" name="topping" value="tomatoes">
+                mushrooms
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="topping">
+                <input type="checkbox" name="topping" value="tomatoes">
+                artichoke hearts
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="topping">
+                <input type="checkbox" name="topping" value="tomatoes">
+                red peppers
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="topping">
+                <input type="checkbox" name="topping" value="tomatoes">
+                olives
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="topping">
+                <input type="checkbox" name="topping" value="jalapenos">
+                jalapenos
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="topping">
+                <input type="checkbox" name="topping" value="onions">
+                onions
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="topping">
+                <input type="checkbox" name="topping" value="garlic">
+                garlic
+              </label>
+            </div>
+            <button type="submit" name="button" class="btn btn-warning">Submit Order!</button>
+          </div>
+          <div class="col-xs-4">
+            <h4>Meat:</h4>
+            <div class="form-group">
+              <label for="topping">
+                <input type="checkbox" name="topping" value="pepperoni">
+                pepperoni
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="topping">
+                <input type="checkbox" name="topping" value="sausage">
+                sausage
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="topping">
+                <input type="checkbox" name="topping" value="shredded chicken">
+                shredded chicken
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="topping">
+                <input type="checkbox" name="topping" value="ham">
+                ham
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="topping">
+                <input type="checkbox" name="topping" value="bacon">
+                bacon
+              </label>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <h4>Other:</h4>
+            <div class="form-group">
+              <label for="topping">
+                <input type="checkbox" name="topping" value="pineapple">
+                pineapple
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="topping">
+                <input type="checkbox" name="topping" value="BBQ sauce">
+                BBQ sauce
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="topping">
+                <input type="checkbox" name="topping" value="feta cheese">
+                feta cheese
+              </label>
+            </div>
 
-      </div>
+          </div>
+        </div>
+      </form>
     </div>
   </body>
 </html>

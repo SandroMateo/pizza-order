@@ -23,6 +23,7 @@ pizzaOrder.prototype.pricing = function() {
 
 $(function() {
   $("#orderButton").click(function() {
+    $("#welcomeScreen").slideUp();
     $("#chooseSize").show();
   });
   $("#sizeButton").click(function() {
