@@ -9,6 +9,7 @@
     <title>Pizza Order</title>
   </head>
   <body>
+    <img id="background-pizza" src="img/background-pizza.png" alt="image of two uncooked pizzas">
     <div class="container">
       <div class="jumbotron">
         <h1>Pizza Pies For The Eyes</h1>
@@ -25,42 +26,38 @@
             <div class="form-group">
               <label for="size">
                 <input type="radio" name="size" value="Extra Large">
-                Extra Large <span class="sizePrice">($8.00 plus toppings)</span>
+                Extra Large <span class="sizePrice">($8.00 plus toppings, 14")</span>
               </label>
             </div>
-            <img id="extraLarge" src="img/pizza.jpg" class="img img-responsive" alt="2D picture of a pizza">
-            <p>|--------14 inches--------|</p><br>
+            <img id="extraLarge" src="img/pizza.jpg" class="img img-responsive" alt="2D picture of a pizza"><br>
             <button id="sizeButton" type="button" class="btn btn-primary">Continue!</button>
           </div>
           <div class="col-xs-3">
             <div class="form-group">
               <label for="size">
                 <input type="radio" name="size" value="Large">
-                Large <span class="sizePrice">($7.00 plus toppings)</span>
+                Large <span class="sizePrice">($7.00 plus toppings, 12")</span>
               </label>
             </div>
             <img id="large" src="img/pizza.jpg" class="img img-responsive" alt="2D picture of a pizza">
-            <p>|-------12 inches-------|</p>
           </div>
           <div class="col-xs-3">
             <div class="form-group">
               <label for="size">
                 <input type="radio" name="size" value="Medium">
-                Medium <span class="sizePrice">($6.00 plus toppings)</span>
+                Medium <span class="sizePrice">($6.00 plus toppings, 10")</span>
               </label>
             </div>
             <img id="medium" src="img/pizza.jpg" class="img img-responsive" alt="2D picture of a pizza">
-            <p>|------10 inches------|</p>
           </div>
           <div class="col-xs-3">
             <div class="form-group">
               <label for="size">
                 <input type="radio" name="size" value="Small">
-                Small <span class="sizePrice">($5.00 plus toppings)</span>
+                Small <span class="sizePrice">($5.00 plus toppings, 8")</span>
               </label>
             </div>
             <img id="small" src="img/pizza.jpg" class="img img-responsive" alt="2D picture of a pizza">
-            <p>|-----8 inches-----|</p>
           </div>
         </div>
         <div class="row" id="chooseToppings">
@@ -211,7 +208,6 @@
           <p>Toppings:<span id="toppings"></span></p>
           <p><strong>Price:</strong> <span id="price"></span></p>
         </ul>
-
       </div>
     </div>
   </body>
