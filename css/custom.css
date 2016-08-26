@@ -1,4 +1,4 @@
-#welcomeScreen {
+h2 {
   text-align: center;
 }
 
@@ -12,5 +12,13 @@
 }
 
 #chooseToppings {
+  display: none;
+}
+
+#userInfo {
+  display: none;
+}
+
+#finishedOrder {
   display: none;
 }
