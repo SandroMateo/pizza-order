@@ -68,9 +68,13 @@ $(function() {
     });
     var order = new pizzaOrder(inputSize, inputToppings);
     ordArray.push(order);
+    $("#list").text("");
     for (var i = 0; i < ordArray.length; i++) {
-      $("#list").append("<li> Pizza" + i + ":</li>")ordArray[i]
+      $("#list").append("<li> Pizza " + (i+1) + ":" +
+                            "<ul><p>Size: " + ordArray[i].sizing + "</p>" +
+                                "<p>Toppings: " + ordArray[i].toppings + "</p></ul></li>");
     }
+    $("#orderList").slideDown();
     inputSize = "";
     inputToppings = [];
   });
@@ -81,12 +85,21 @@ $(function() {
         inputAddress = $("#address-input").val();
         inputPhone = $("#phone-input").val();
     var customer = new pizzaCustomer(inputFirst, inputLast, inputAddress, inputPhone, ordArray);
+    $("input:checkbox[name=topping]:checked").each(function() {
+      inputToppings.push(" " + this.value);
+    });
+    var order = new pizzaOrder(inputSize, inputToppings);
+    ordArray.push(order);
+    $("#list").text("");
+    for (var i = 0; i < ordArray.length; i++) {
+      $("#list").append("<li> Pizza " + (i+1) + ":" +
+                            "<ul><p>Size: " + ordArray[i].sizing + "</p>" +
+                                "<p>Toppings: " + ordArray[i].toppings + "</p></ul></li>");
+    }
     customer.totalPricing();
     $("#name").text(customer.first + " " + customer.last);
     $("#address").text(customer.address);
     $("#phone").text(customer.phone);
-    $("#size").text(customer.orders[0].sizing);
-    $("#toppings").text(customer.orders[0].toppings);
     $("#price").text("$" + customer.totalPrice.toFixed(2));
     $("form").slideUp();
     $("#finishedOrder").fadeIn(1500);
