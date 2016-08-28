@@ -26,7 +26,7 @@ pizzaOrder.prototype.pricing = function() {
   else {
     this.price = 5;
   }
-  this.price += 0.50 * this.sizing.length;
+  this.price += 0.50 * this.toppings.length;
 }
 
 pizzaCustomer.prototype.totalPricing = function() {
@@ -40,8 +40,19 @@ $(function() {
   var ordArray = [];
   var inputSize = "";
   var inputToppings = [];
-  $("#orderButton").click(function() {
+  $("#takeOutButton").click(function() {
     $("#welcomeScreen").slideUp();
+    $("#takeOutInfo").show();
+    $("#infoButton").show();
+  });
+  $("#deliverButton").click(function() {
+    $("#welcomeScreen").slideUp();
+    $("#takeOutInfo").show();
+    $("#deliveryInfo").show();
+    $("#infoButton").show();
+  });
+  $("#infoButton").click(function() {
+    $("#infoButton").slideUp();
     $("#chooseSize").show();
   });
   $("#sizeButton").click(function() {
@@ -49,7 +60,7 @@ $(function() {
     $("#chooseToppings").fadeIn(1500);
     inputSize = $("input:radio[name=size]:checked").val();
   });
-  $("#toppingsButton").click(function() {
+  $("#addButton").click(function() {
     $("#toppingsButton").slideUp();
     $("#userInfo").fadeIn(1500);
     $("input:checkbox[name=topping]:checked").each(function() {
@@ -57,7 +68,9 @@ $(function() {
     })
     var order = new pizzaOrder(inputSize, inputToppings);
     ordArray.push(order);
-    console.log(order);
+    inputSize = "";
+    inputToppings = [];
+    console.log(ordArray);
   });
   $("form").submit(function(event) {
     event.preventDefault();
@@ -67,6 +80,9 @@ $(function() {
         inputPhone = $("#phone-input").val();
     var customer = new pizzaCustomer(inputFirst, inputLast, inputAddress, inputPhone, ordArray);
     customer.totalPricing();
+    console.log(customer.orders[0].price);
+    console.log(customer.orders[1].price);
+    console.log(customer.totalPrice);
     $("#name").text(customer.first + " " + customer.last);
     $("#address").text(customer.address);
     $("#phone").text(customer.phone);
@@ -75,6 +91,5 @@ $(function() {
     $("#price").text("$" + customer.totalPrice.toFixed(2));
     $("form").slideUp();
     $("#finishedOrder").fadeIn(1500);
-    console.log(order);
   });
 });

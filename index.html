@@ -16,9 +16,39 @@
       <div id="welcomeScreen">
         <h2>Welcome!</h2>
         <p>Here at Pizza Pies For The Eyes we hand make every artisan pie with love. Each pie comes with a thin crispy crust baked to perfection, our housemade tomatoe sauce filled with delicious spices, and only the finest and freshest mozzarrella cheese to top it off. We also offer an <strong>array</strong> of toppings for you to choose from, all at a great cost! Make an order now and we'll deliver to you in no time!</p>
-        <button id="orderButton" type="button" class="btn btn-success">Begin Order!</button>
+        <button id="takeOutButton" type="button" class="btn btn-warning">Take Out!</button>
+        <button id="deliverButton" type="button" class="btn btn-success">Delivery!</button>
       </div>
       <form>
+        <div class="form-group">
+          <div class="row" id="takeOutInfo">
+            <h3>Enter Your Info:</h3>
+            <label for="name-input">Name: </label>
+            <div class="row">
+              <div class="col-xs-3">
+                <input id="firstname-input" type="text" class="form-control" placeholder="First">
+              </div>
+              <div class="col-xs-3">
+                <input id="lastname-input" type="text" class="form-control" placeholder="Last">
+              </div>
+            </div>
+          </div>
+          <div class="row" id="deliveryInfo"
+            <label for="address-input">Address: </label>
+            <div class="row">
+              <div class="col-xs-6">
+                <input id="address-input" type="text" class="form-control" placeholder="Street/City/State/Zip">
+              </div>
+            </div>
+            <label for="phone-input">Phone Number: </label>
+            <div class="row">
+              <div class="col-xs-3">
+                <input id="phone-input" type="text" class="form-control" placeholder="Optional">
+              </div>
+            </div>
+          </div>
+        </div>
+        <button id="infoButton" type="button" class="btn btn-primary">Continue!</button>
         <div class="row" id="chooseSize">
           <h3>Choose a Size:</h3>
           <div class="col-xs-3">
@@ -112,7 +142,8 @@
                 garlic
               </label>
             </div>
-            <button id="toppingsButton" type="button" class="btn btn-primary">Continue!</button>
+            <button id="addButton" type="button" class="btn btn-primary">Add Another!</button>
+            <button type="submit" name="button" class="btn btn-danger">Submit Order!</button>
           </div>
           <div class="col-xs-4">
             <h4>Meat:</h4>
@@ -168,33 +199,6 @@
               </label>
             </div>
           </div>
-        </div>
-        <div class="row" id="userInfo">
-          <h3>Enter Your Info:</h3>
-          <div class="form-group">
-            <label for="name-input">Name: </label>
-            <div class="row">
-              <div class="col-xs-3">
-                <input id="firstname-input" type="text" class="form-control" placeholder="First">
-              </div>
-              <div class="col-xs-3">
-                <input id="lastname-input" type="text" class="form-control" placeholder="Last">
-              </div>
-            </div>
-            <label for="address-input">Address: </label>
-            <div class="row">
-              <div class="col-xs-6">
-                <input id="address-input" type="text" class="form-control" placeholder="Street/City/State/Zip">
-              </div>
-            </div>
-            <label for="phone-input">Phone Number: </label>
-            <div class="row">
-              <div class="col-xs-3">
-                <input id="phone-input" type="text" class="form-control" placeholder="Optional">
-              </div>
-            </div>
-          </div>
-          <button type="submit" name="button" class="btn btn-danger">Submit Order!</button>
         </div>
       </form>
       <div id="finishedOrder">

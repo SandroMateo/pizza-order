@@ -16,12 +16,20 @@ body {
   background: linear-gradient(90deg, skyblue, white, crimson);
 }
 
-h2 {
+#welcomeScreen {
   text-align: center;
 }
 
-#orderButton {
-  margin-left: 45%;
+#takeOutInfo {
+  display: none;
+}
+
+#deliveryInfo {
+  display: none;
+}
+
+#infoButton {
+  display: none;
 }
 
 .sizePrice {
@@ -52,10 +60,6 @@ h2 {
   border-radius: 100px;
 }
 #chooseToppings {
-  display: none;
-}
-
-#userInfo {
   display: none;
 }
 
