@@ -63,6 +63,18 @@ body {
   display: none;
 }
 
+#addButton {
+  display: none;
+}
+
+#submitButton {
+  display: none;
+}
+
+#pricing {
+  display: none;
+}
+
 #finishedOrder {
   display: none;
 }

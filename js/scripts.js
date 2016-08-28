@@ -58,9 +58,13 @@ $(function() {
   $("#sizeButton").click(function() {
     $("#sizeButton").slideUp();
     $("#chooseToppings").fadeIn(1500);
+    $("#addButton").show();
+    $("#submitButton").show();
     inputSize = $("input:radio[name=size]:checked").val();
   });
   $("#addButton").click(function() {
+    $("#addButton").hide();
+    $("#submitButton").hide();
     $("#chooseToppings").slideUp();
     $("#sizeButton").slideDown();
     $("input:checkbox[name=topping]:checked").each(function() {
@@ -75,11 +79,14 @@ $(function() {
                                 "<p>Toppings: " + ordArray[i].toppings + "</p></ul></li>");
     }
     $("#orderList").slideDown();
+    $("#pricing").show();
     inputSize = "";
     inputToppings = [];
   });
   $("form").submit(function(event) {
     event.preventDefault();
+    $("#addButton").hide();
+    $("#submitButton").hide();
     var inputFirst = $("#firstname-input").val();
         inputLast = $("#lastname-input").val();
         inputAddress = $("#address-input").val();
@@ -103,5 +110,6 @@ $(function() {
     $("#price").text("$" + customer.totalPrice.toFixed(2));
     $("form").slideUp();
     $("#finishedOrder").fadeIn(1500);
+    $("#pricing").show();
   });
 });
