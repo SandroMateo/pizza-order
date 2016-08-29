@@ -57,7 +57,7 @@ body {
 
 #small {
   width: 70%;
-  border-radius: 100px;
+  border-radius: 100%;
 }
 #chooseToppings {
   display: none;
@@ -72,6 +72,10 @@ body {
 }
 
 #pricing {
+  display: none;
+}
+
+.delivery {
   display: none;
 }
 

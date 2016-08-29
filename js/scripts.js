@@ -78,8 +78,8 @@ $(function() {
                             "<ul><p>Size: " + ordArray[i].sizing + "</p>" +
                                 "<p>Toppings: " + ordArray[i].toppings + "</p></ul></li>");
     }
+    $("input:checkbox[name=topping]:checked").prop("checked", false); 
     $("#orderList").slideDown();
-    $("#pricing").show();
     inputSize = "";
     inputToppings = [];
   });
@@ -105,8 +105,11 @@ $(function() {
     }
     customer.totalPricing();
     $("#name").text(customer.first + " " + customer.last);
-    $("#address").text(customer.address);
-    $("#phone").text(customer.phone);
+    if(customer.address !== "") {
+      $("#address").text(customer.address);
+      $("#phone").text(customer.phone);
+      $(".delivery").show();
+    }
     $("#price").text("$" + customer.totalPrice.toFixed(2));
     $("form").slideUp();
     $("#finishedOrder").fadeIn(1500);
