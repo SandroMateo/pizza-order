@@ -54,12 +54,14 @@ $(function() {
   $("#infoButton").click(function() {
     $("#infoButton").slideUp();
     $("#chooseSize").show();
+    $("#submitButton").prop("disabled", true);
   });
   $("#sizeButton").click(function() {
     $("#sizeButton").slideUp();
     $("#chooseToppings").fadeIn(1500);
     $("#addButton").show();
     $("#submitButton").show();
+    $("#submitButton").prop("disabled", false);
     inputSize = $("input:radio[name=size]:checked").val();
   });
   $("#addButton").click(function() {
@@ -78,7 +80,7 @@ $(function() {
                             "<ul><p>Size: " + ordArray[i].sizing + "</p>" +
                                 "<p>Toppings: " + ordArray[i].toppings + "</p></ul></li>");
     }
-    $("input:checkbox[name=topping]:checked").prop("checked", false); 
+    $("input:checkbox[name=topping]:checked").prop("checked", false);
     $("#orderList").slideDown();
     inputSize = "";
     inputToppings = [];
